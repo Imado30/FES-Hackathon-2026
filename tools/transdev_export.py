@@ -3,7 +3,7 @@
 Aggregierter Datenexport fuer Transdev und traffiQ.
 
 Erzeugt eine Excel-Mappe aus den Verkehrsdaten im Repo und, wenn vorhanden, aus den
-von Mainsam erkannten Fahrten. Der Export ist so gebaut, dass er wiederholbar laeuft:
+von GeMainsam erkannten Fahrten. Der Export ist so gebaut, dass er wiederholbar laeuft:
     python tools/transdev_export.py [--ledger pfad/zu/ledger.json] [--out pfad.xlsx]
 
 Datenschutz, gilt fuer jede Zeile in dieser Mappe:
@@ -128,7 +128,7 @@ def sheet_haltestellen(limit=250):
 
 def sheet_mainsam(ledger_path):
     """
-    Von Mainsam erkannte Fahrten, aggregiert. Das ist der Teil, den der Verbund heute
+    Von GeMainsam erkannte Fahrten, aggregiert. Das ist der Teil, den der Verbund heute
     nicht hat: bestaetigte Fahrten mit Linie, Richtung und Stunde aus dem Alltag.
     """
     head = [['Linie', 'Ziel', 'Stunde', 'Nachweis', 'Fahrten', 'Ø km', 'Σ km', 'Σ CO₂e vermieden (kg)']]
@@ -169,7 +169,7 @@ def sheet_hinweise(stats):
         ['Aggregierter Mobilitätsexport für Transdev und traffiQ'],
         [],
         ['Erzeugt am', datetime.now(timezone.utc).astimezone().strftime('%d.%m.%Y %H:%M %Z')],
-        ['Erzeugt von', 'tools/transdev_export.py (Mainsam, Frankfurt Impact Challenge)'],
+        ['Erzeugt von', 'tools/transdev_export.py (GeMainsam, Frankfurt Impact Challenge)'],
         [],
         ['Datenschutz'],
         ['k-Anonymität', f'k ≥ {K_MIN}. Zeilen mit weniger Beobachtungen werden unterdrückt.'],
@@ -179,13 +179,13 @@ def sheet_hinweise(stats):
         [],
         ['Unterdrückte Zeilen'],
         ['Auslastung', stats['auslastung_unterdrueckt']],
-        ['Mainsam-Fahrten', stats['mainsam_unterdrueckt']],
+        ['GeMainsam-Fahrten', stats['mainsam_unterdrueckt']],
         [],
         ['Quellen'],
         ['Auslastung', 'Mobilitätsdaten/BeispielAFZ.csv · echte Messung nur 30.04.2024 (U7), Rest Demo-Daten'],
         ['Tagesgang', 'Mobilitätsdaten/tagesgang_avg.csv · Verbindungsanfragen, Durchschnittstag'],
         ['Haltestellen', f"Mobilitätsdaten/haltestellen_avg.csv · {stats['haltestellen_gesamt']} Haltestellen, Top {stats['haltestellen_top']} ausgewiesen"],
-        ['Mainsam-Fahrten', 'Ledger der App, GPS gegen GTFS geprüft' if stats['mainsam_vorhanden'] else 'kein Ledger übergeben, Blatt bleibt leer'],
+        ['GeMainsam-Fahrten', 'Ledger der App, GPS gegen GTFS geprüft' if stats['mainsam_vorhanden'] else 'kein Ledger übergeben, Blatt bleibt leer'],
         [],
         ['Nicht addieren'],
         ['Hinweis', 'Anfragen, Zählwerte und erkannte Fahrten sind verschiedene Messgrößen.'],
@@ -306,14 +306,14 @@ def main():
         ('Auslastung', auslastung),
         ('Tagesgang', sheet_tagesgang()),
         ('Haltestellen', haltestellen),
-        ('Mainsam-Fahrten', mainsam),
+        ('GeMainsam-Fahrten', mainsam),
     ])
 
     print(f'geschrieben: {a.out}')
     print(f'  Auslastung      {len(auslastung) - 1} Zeilen, davon {ausl_unterdrueckt} unterdrückt (n < {K_MIN})')
     print(f'  Tagesgang       24 Stunden')
     print(f'  Haltestellen    {len(haltestellen) - 1} von {halt_gesamt}')
-    print(f'  Mainsam-Fahrten {len(mainsam) - 1} Zeilen'
+    print(f'  GeMainsam-Fahrten {len(mainsam) - 1} Zeilen'
           + (f', {mainsam_unterdrueckt} unterdrückt' if mainsam_da else ' (kein Ledger übergeben)'))
 
 

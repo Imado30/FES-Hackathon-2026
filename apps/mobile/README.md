@@ -1,4 +1,4 @@
-# Mainsam-App
+# GeMainsam-App
 
 Expo / React Native mit Expo Router für iOS, Android und Web. [Projektübersicht](../../README.md), [Demo-Ablauf](DEMO.md), [Serververträge](../trust-server/README.md).
 

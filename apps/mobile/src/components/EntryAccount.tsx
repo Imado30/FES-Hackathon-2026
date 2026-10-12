@@ -12,7 +12,7 @@ export default function EntryAccount({initialRegister=false,onReady,color=C.ink}
   const valid=password.length>=10&&(register?/^[a-z0-9._-]{3,24}$/i.test(name)&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email):name.trim().length>=3);
   async function submit(){if(busy||!valid)return;setBusy(true);setError('');try{await trust.login(name.trim(),password,register,email.trim());setPassword('');onReady();}catch(e:any){setError(e.message);}finally{setBusy(false);}}
   return <View style={{gap:12}}>
-    <Text style={T.h1}>{register?'Dein Mainsam-Zugang':'Willkommen zurück'}</Text>
+    <Text style={T.h1}>{register?'Dein GeMainsam-Zugang':'Willkommen zurück'}</Text>
     <Text style={T.body}>Einmal anmelden, überall mitmachen. Öffentlich sichtbar sind nur Benutzername und ID.</Text>
     <TextInput accessibilityLabel={register?'Benutzername':'E-Mail oder Benutzername'} placeholder={register?'Benutzername':'E-Mail oder Benutzername'} value={name} onChangeText={setName} autoCapitalize="none" autoCorrect={false} autoComplete="username" maxLength={register?24:254} style={field}/>
     {register&&<TextInput accessibilityLabel="E-Mail" placeholder="E-Mail" value={email} onChangeText={setEmail} autoCapitalize="none" autoCorrect={false} keyboardType="email-address" autoComplete="email" maxLength={254} style={field}/>}

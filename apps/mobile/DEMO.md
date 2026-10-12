@@ -24,7 +24,7 @@ Reihenfolge so, dass der stärkste Moment (die abgelehnte Autofahrt) in Minute 3
 ## Pitch-Folien (Vorschlag, 8 Folien)
 
 1. Problem: Angebote verteilt, Beitrag abstrakt, Wirkung nicht gemeinsam erlebbar (Zitat aus der Aufgabe).
-2. Mainsam in einem Satz + Kai.
+2. GeMainsam in einem Satz + Kai.
 3. Live-Demo (der Plan oben).
 4. Nachweis-Logik: bestätigt / plausibel / schwach / selbst / nicht zuordenbar als Multiplikator.
 5. Punkte ≠ Impact: zwei Währungen, warum.

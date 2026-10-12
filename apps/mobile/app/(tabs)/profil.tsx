@@ -149,7 +149,7 @@ export default function Profile() {
       </View>
 
       <SectionTitle title="Dein Zugang" />
-      <Text style={T.body}>{s.accessMode==='guest'?'Du nutzt Mainsam als Gast. Essen bleibt ohne Registrierung zugänglich.':'Ein Zugang gilt für alle Bereiche der App. Deine E-Mail bleibt privat.'}</Text>
+      <Text style={T.body}>{s.accessMode==='guest'?'Du nutzt GeMainsam als Gast. Essen bleibt ohne Registrierung zugänglich.':'Ein Zugang gilt für alle Bereiche der App. Deine E-Mail bleibt privat.'}</Text>
       {s.accessMode==='guest'&&<Button label="Zugang einrichten" variant="soft" color={col} onPress={()=>router.push('/anmelden?register=1')} style={{ marginBottom: 12 }}/>}
 
       <SectionTitle title={t('tabs.profile.foodsharing')} />

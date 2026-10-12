@@ -36,7 +36,7 @@ Wenn ein Feature auf keines einzahlt, sag mir, dass wir es streichen sollen.
 
 ## Produkt
 
-Arbeitstitel: **Mainsam** (Main + gemeinsam). Maskottchen: ein Chamäleon, das seine
+Arbeitstitel: **Mainsam** (Main + gemeinsam), später **GeMainsam**. Maskottchen: ein Chamäleon, das seine
 Farbe an den aktuellen Kontext anpasst und die Punktelogik erklärt.
 
 Zielgruppe: alle ab 12 Jahren in Frankfurt, ausdrücklich auch Menschen mit geringen

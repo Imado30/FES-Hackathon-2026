@@ -5,7 +5,7 @@ jede Session, jeden Branch, jede Person.
 
 ## Was wir bauen
 
-**Mainsam** — eine mobile-first App, die nachhaltige Angebote in Frankfurt bündelt:
+**GeMainsam** — eine mobile-first App, die nachhaltige Angebote in Frankfurt bündelt:
 entdecken, Aktion bewusst auslösen, Nachweis prüfen, Wirkung verstehen, fair belohnen.
 Maskottchen ist ein Chamäleon, das den Kontext einfärbt und die Punktelogik erklärt.
 
@@ -67,5 +67,5 @@ README und Demo-Skript liegen dort (`README.md`, `DEMO.md`). Web-Screenshots: `p
 - `Mobilitätsdaten/GTFS_gefiltert_Frankfurt+30km.7z` — Fahrplan, 100.483 Fahrten
 - `Mobilitätsdaten/haltestellen_avg.csv`, `tagesgang_avg.csv`, `BeispielAFZ.csv`,
   `BeispielDataSetEFA.csv`, `e-scooter-beispiel.csv` — teilweise synthetisch
-- `Foodsharing API/` — Live-API, Key in `KEYS.txt`
+- `Foodsharing API/` — Live-API, Team-Key vom Veranstalter (nicht im Repo, lokal in `KEYS.txt`)
 - Vytal: externe Notion-Doku, sonst Mocks

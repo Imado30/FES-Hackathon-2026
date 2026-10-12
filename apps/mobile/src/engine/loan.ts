@@ -67,7 +67,7 @@ export function settleFee(_reason: SettleReason) {
   return FEE_KEPT;
 }
 
-/** Was in Mainsam über eine bezahlte Gebühr steht. Die Abrechnung selbst läuft bei Vytal. */
+/** Was in GeMainsam über eine bezahlte Gebühr steht. Die Abrechnung selbst läuft bei Vytal. */
 export interface Settlement {
   reason: SettleReason;
   /** Betrag in Euro. */

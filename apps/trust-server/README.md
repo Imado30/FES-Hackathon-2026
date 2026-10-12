@@ -25,7 +25,7 @@ Das Konto muss regulär registriert sein. Die Verwaltungsseite ist inzwischen au
 
 [Gesamter Ablauf, QR-Formate und Grenzen](../../docs/EINSTIEG-UND-QR-UEBERGABEN.md). Die folgenden Abschnitte dokumentieren die weiterhin unterstützten bisherigen QR-/Sechs-Ziffern-Endpunkte; die aktuelle Oberfläche nutzt vier Ziffern oder den persönlichen QR.
 
-# Mainsam: Abholungen und Rückgaben
+# GeMainsam: Abholungen und Rückgaben
 
 Persistenter lokaler Server für Foodsharing-Zusagen, gemeinsame Regalmeldungen, Vytal-Rückgabebelege und Bewertungen. Node **22.18+**, keine kostenpflichtige API und keine zusätzlichen Server-Pakete. Daten bleiben in `data/trust.sqlite`; additive Migrationen erhalten vorhandene Konten, Zusagen und Belege.
 
@@ -92,7 +92,7 @@ node merchant.mjs revoke <Benutzername> <Store-ID>
 
 `TRUST_DB` muss beim Verwaltungsbefehl dieselbe Datenbank wie beim Server bezeichnen. Keine Passwörter oder Händler-Schlüssel in die App kopieren. Diese manuelle Zuordnung ist eine Betreiberentscheidung; ein passender Store-Name beweist keine offizielle Vytal-Autorisierung.
 
-**Die geschützte Vytal-Händler-API ist nicht angebunden.** Im Repository fehlen ein nutzbarer Händlerzugang, ein zugewiesener Testbehälter und ein bestätigter Zielhost. Mainsam-Belege können lokal vollständig geprüft werden, buchen aber keine externe Rückgabe und beenden keine echte Vytal-Leihfrist. Dafür braucht es den autorisierten Store-Adapter zu `ContainerReturn` und die Prüfung des anschließenden Partnerzustands. Grundlagen: `docs/VERTRAEGE.md`, Vytal-Abschnitt. Die Notion-Dokumentation war bei dieser Bearbeitung nicht erneut abrufbar; API-Verträge werden nicht erfunden.
+**Die geschützte Vytal-Händler-API ist nicht angebunden.** Im Repository fehlen ein nutzbarer Händlerzugang, ein zugewiesener Testbehälter und ein bestätigter Zielhost. GeMainsam-Belege können lokal vollständig geprüft werden, buchen aber keine externe Rückgabe und beenden keine echte Vytal-Leihfrist. Dafür braucht es den autorisierten Store-Adapter zu `ContainerReturn` und die Prüfung des anschließenden Partnerzustands. Grundlagen: `docs/VERTRAEGE.md`, Vytal-Abschnitt. Die Notion-Dokumentation war bei dieser Bearbeitung nicht erneut abrufbar; API-Verträge werden nicht erfunden.
 
 ## Sicherheit, Grenzen und bestehende Daten
 

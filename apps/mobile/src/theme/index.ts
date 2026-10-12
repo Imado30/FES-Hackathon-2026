@@ -16,7 +16,7 @@ export const NAVY = '#17427F';
 
 /** Kontextfarben. Das Chamäleon nimmt die Farbe des aktiven Kontexts an. */
 export const CONTEXT = {
-  home: { color: '#0F2A5C', soft: '#E3E9F7', name: 'Mainsam' },
+  home: { color: '#0F2A5C', soft: '#E3E9F7', name: 'GeMainsam' },
   mobility: { color: RIDE.red, soft: '#FDEAEA', name: 'Ride2Impact' },
   food: { color: '#2FB55C', soft: '#E1F6E8', name: 'Save2Share' },
   // Das helle Lila aus der Vorlage traegt keine weisse Schrift (Kontrast 2,2).

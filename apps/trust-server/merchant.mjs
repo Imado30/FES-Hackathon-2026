@@ -12,7 +12,7 @@ if(command==='stores'||command==='shelves') {
   const db=new DatabaseSync(process.env.TRUST_DB??fileURLToPath(new URL('./data/trust.sqlite',import.meta.url)));
   try {
     const user=db.prepare('SELECT id,guest FROM users WHERE name=?').get(name.toLowerCase());
-    if(!user||user.guest)throw new Error('Bitte zuerst einen regulären Mainsam-Zugang am App-Einstieg anlegen.');
+    if(!user||user.guest)throw new Error('Bitte zuerst einen regulären GeMainsam-Zugang am App-Einstieg anlegen.');
     const table=shelf?'shelf_staff':'merchants',column=shelf?'point_id':'store_id';
     if(command.startsWith('grant'))db.prepare(`INSERT OR IGNORE INTO ${table} VALUES(?,?)`).run(user.id,place.id);
     else db.prepare(`DELETE FROM ${table} WHERE user_id=? AND ${column}=?`).run(user.id,place.id);

@@ -105,7 +105,7 @@ export function reuseRoutes({ db, get, all, run, transaction, now, fail, fields,
       const repeated=get('SELECT 1 FROM reuse_loans WHERE code=? AND id<>? AND returned>?',l.code,l.id,now()-DAY);
       if(!l.demo) for(const type of ['reuse.return',...(now()-l.borrowed<48*3600000?['reuse.return_fast']:[])]) {
         const key=`trust:reuse:${l.id}:${type}`;
-        const result=award({type,partner:'vytal',status:'bestätigt',key,at:now(),title:type==='reuse.return_fast'?'Schnelle Rückgabe':`Rückgabe ${l.code}`,meta:{source:'mainsam-store',containers:type==='reuse.return'?1:0,kind:l.kind,evidence:[`Annahme durch freigegebene Rücknahmestelle ${catalog.find(s=>s.id===r.store_id).name}`,'Persönlicher, einmaliger Rückgabe-QR innerhalb von drei Minuten eingelöst','Mainsam-Beleg; keine Buchung im externen Vytal-Konto']}},ledger,{verifiedReuse:true});
+        const result=award({type,partner:'vytal',status:'bestätigt',key,at:now(),title:type==='reuse.return_fast'?'Schnelle Rückgabe':`Rückgabe ${l.code}`,meta:{source:'mainsam-store',containers:type==='reuse.return'?1:0,kind:l.kind,evidence:[`Annahme durch freigegebene Rücknahmestelle ${catalog.find(s=>s.id===r.store_id).name}`,'Persönlicher, einmaliger Rückgabe-QR innerhalb von drei Minuten eingelöst','GeMainsam-Beleg; keine Buchung im externen Vytal-Konto']}},ledger,{verifiedReuse:true});
         if(repeated||isGuest(actor)) {result.points=0;result.formula=isGuest(actor)?'Gast-Rückgabe → Beleg ohne einlösbare Punkte':'Derselbe Behälter innerhalb von 24 Stunden → 0 Punkte';result.reasons.push(result.formula);}
         run('INSERT INTO reuse_awards VALUES(?,?,?)',key,actor,JSON.stringify(result));ledger.push(result);
       }

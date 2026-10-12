@@ -37,7 +37,7 @@ export const CHAPTERS: QuizChapter[] = [
     intro: 'Leon vergleicht drei Wege von Bockenheim zur Hauptwache. Das Auto steht vor der Tür.',
     questions: [
       { q: 'Wie viel CO₂ spart die U-Bahn gegenüber dem Auto je Kilometer, ungefähr?', options: ['ca. 10 g', 'ca. 100 g', 'ca. 1 kg'], answer: 1, why: 'Pkw ca. 150 g, U-Bahn ca. 55 g je Personenkilometer (UBA-Richtwerte).' },
-      { q: 'Ersetzt ein E-Scooter für 800 m meistens…', options: ['eine Autofahrt', 'einen Fußweg', 'eine Bahnfahrt'], answer: 1, why: 'Kurze Scooter-Fahrten ersetzen meist Gehen. Deshalb gibt es dafür in Mainsam keine Punkte.' },
+      { q: 'Ersetzt ein E-Scooter für 800 m meistens…', options: ['eine Autofahrt', 'einen Fußweg', 'eine Bahnfahrt'], answer: 1, why: 'Kurze Scooter-Fahrten ersetzen meist Gehen. Deshalb gibt es dafür in GeMainsam keine Punkte.' },
     ],
   },
   {

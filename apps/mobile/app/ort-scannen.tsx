@@ -13,7 +13,7 @@ export default function PlaceScanner(){
   function scan(value:string){if(lock.current)return;setRaw(value);setError('');
     if(/^mainsam:cleanup:[a-f0-9-]{36}:[a-f0-9]{48}$/.test(value.trim())){lock.current=true;router.replace({pathname:'/scan',params:{mode:'peer',proof:value.trim()}});return;}
     const m=value.trim().match(/^mainsam:(shelf|offer|provider|store):([a-zA-Z0-9_-]+)$/);
-    if(!m){setError('Bitte den Mainsam-QR am Regal, Verteiler oder Restaurant scannen. Persönliche Übergabecodes öffnest du in deiner Übergabe.');return;}
+    if(!m){setError('Bitte den GeMainsam-QR am Regal, Verteiler oder Restaurant scannen. Persönliche Übergabecodes öffnest du in deiner Übergabe.');return;}
     if(m[1]==='shelf'&&!points.some(p=>String(p.id)===m[2])||m[1]==='store'&&!stores.some(s=>s.id===m[2])){setError('Dieser Ort ist nicht bekannt.');return;}
     if(['offer','provider'].includes(m[1])&&!/^[a-f0-9-]{36}$/.test(m[2])){setError('Ungültiger Angebotscode.');return;}
     lock.current=true;

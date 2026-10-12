@@ -26,7 +26,7 @@ Gäste erhalten eine zufällige, auf dem Gerät gespeicherte Sitzung ohne Eingab
 | `mainsam:store:<Store-ID>` | Mehrweg am Restaurant öffnen | Nein |
 | Persönlicher QR oder vier Ziffern | Genau eine bereits ausgewählte Übergabe/Meldung/Rückgabe bestätigen | Erst nach serverseitiger Prüfung |
 
-Die Ortscodes sind in der App an Regal/Angebot/Rücknahmestelle anzeigbar. Wer Angebote veröffentlicht, kann außerdem unter Übergaben den eigenen Verteiler-QR für alle Angebote zeigen. Sie werden unter „Scannen → Regal, Verteiler oder Restaurant scannen“ gelesen. Es sind interne Mainsam-Codes, keine universellen Links für die iPhone-Kamera und keine offiziellen foodsharing-/Vytal-Codes. Physische Aufkleber müssen die beteiligten Orte selbst bereitstellen. Der Scan lädt einen Ort, er beweist keine Anwesenheit.
+Die Ortscodes sind in der App an Regal/Angebot/Rücknahmestelle anzeigbar. Wer Angebote veröffentlicht, kann außerdem unter Übergaben den eigenen Verteiler-QR für alle Angebote zeigen. Sie werden unter „Scannen → Regal, Verteiler oder Restaurant scannen“ gelesen. Es sind interne GeMainsam-Codes, keine universellen Links für die iPhone-Kamera und keine offiziellen foodsharing-/Vytal-Codes. Physische Aufkleber müssen die beteiligten Orte selbst bereitstellen. Der Scan lädt einen Ort, er beweist keine Anwesenheit.
 
 ## Persönliche Foodsharing-Übergabe
 

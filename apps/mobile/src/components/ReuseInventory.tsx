@@ -70,7 +70,7 @@ function LoanCard({loan:l,onSaved}:{loan:ReuseLoan;onSaved:()=>Promise<void>}) {
       <Text style={T.body}>Kommt dieser Behälter nicht mehr zurück? Melde ihn und begleiche die Gebühr direkt, dann ist die Ausleihe abgeschlossen.</Text>
       <Row style={{flexWrap:'wrap'}}>{(Object.keys(SETTLE_REASONS) as SettleReason[]).map(id=><Pill key={id} label={SETTLE_REASONS[id]} active={payReason===id} color={C.warn} onPress={()=>setPayReason(id)}/>)}</Row>
       <FeeText text={`${fmtFee(fee)} Behältergebühr · Zahlungsart: ${method==='Keine'?'noch keine hinterlegt':method}`} style={T.body} color={C.warn}/>
-      <Text style={T.small}>Demo-Buchung: Mainsam bewegt kein Geld und speichert keine Kartendaten. Der Beleg zeigt, was über dein Vytal-Konto abgerechnet würde. Ist der Behälter noch da, ist die Rückgabe immer günstiger.</Text>
+      <Text style={T.small}>Demo-Buchung: GeMainsam bewegt kein Geld und speichert keine Kartendaten. Der Beleg zeigt, was über dein Vytal-Konto abgerechnet würde. Ist der Behälter noch da, ist die Rückgabe immer günstiger.</Text>
       {method==='Keine'
         ?<Button label="Zahlungsart hinterlegen" color={C.warn} variant="soft" onPress={()=>router.push('/daten')}/>
         :<Button label={busy?'Buche…':`${fmtFee(fee)} jetzt bezahlen`} color={C.warn} disabled={busy} onPress={()=>{setBusy(true);setError('');void reuseTrust.settle(l.id,payReason,method).then(async()=>{await cancelReturnReminder(l.id);await onSaved();setPay(false);}).catch(e=>setError(e.message)).finally(()=>setBusy(false));}}/>}

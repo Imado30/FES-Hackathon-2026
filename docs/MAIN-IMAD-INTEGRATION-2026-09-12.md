@@ -48,4 +48,4 @@ Der bisherige Lastenrad-Kartenfilter wurde auf Main bewusst entfernt; dessen Ent
 
 [README im Repository](../README.md) und [Server-Anleitung](../apps/trust-server/README.md) erklären die beiden Terminalprozesse, private Netzverbindung und einmalige Ladenfreigabe. Bestehende `.env` und `data/trust.sqlite` erhalten. Keine öffentlichen Tunnel oder neue externen Dienste eingerichtet.
 
-Ein Mainsam-Rückgabebeleg ist noch keine echte Buchung im Vytal-Konto. Fotonachweise sind lokale Plausibilitätsprüfungen, keine externe FES-Bestätigung. Physische Kamera, Mikrofon und GPS sowie gleichzeitige Bedienung auf zwei Handys sind durch Browser und Export nicht abschließend geprüft.
+Ein GeMainsam-Rückgabebeleg ist noch keine echte Buchung im Vytal-Konto. Fotonachweise sind lokale Plausibilitätsprüfungen, keine externe FES-Bestätigung. Physische Kamera, Mikrofon und GPS sowie gleichzeitige Bedienung auf zwei Handys sind durch Browser und Export nicht abschließend geprüft.

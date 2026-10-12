@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Mainsam",
+    "name": "GeMainsam",
     "slug": "mainsam",
     "scheme": "mainsam",
     "version": "0.1.0",
@@ -17,9 +17,9 @@
       "supportsTablet": false,
       "bundleIdentifier": "de.frankfurt.mainsam",
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Mainsam nutzt deinen Standort während der Nutzung der App für Angebote in deiner Nähe und bewusst gestartete Fahrten.",
+        "NSLocationWhenInUseUsageDescription": "GeMainsam nutzt deinen Standort während der Nutzung der App für Angebote in deiner Nähe und bewusst gestartete Fahrten.",
         "NSCameraUsageDescription": "Die Kamera wird zum Scannen von QR-Codes (Mehrweg, Clean-up-Bestätigung) und für Regal-Fotos verwendet.",
-        "NFCReaderUsageDescription": "Mainsam liest NFC-Tags in Bus und Bahn, um eine Fahrt bewusst zu starten."
+        "NFCReaderUsageDescription": "GeMainsam liest NFC-Tags in Bus und Bahn, um eine Fahrt bewusst zu starten."
       }
     },
     "android": {
@@ -48,7 +48,7 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Mainsam nutzt deinen Standort während der Nutzung der App für Angebote in deiner Nähe und bewusst gestartete Fahrten."
+          "locationWhenInUsePermission": "GeMainsam nutzt deinen Standort während der Nutzung der App für Angebote in deiner Nähe und bewusst gestartete Fahrten."
         }
       ],
       [
@@ -60,7 +60,7 @@
       [
         "expo-audio",
         {
-          "microphonePermission": "Mainsam nimmt deine Sprachnotiz auf, wenn du die Aufnahme startest.",
+          "microphonePermission": "GeMainsam nimmt deine Sprachnotiz auf, wenn du die Aufnahme startest.",
           "enableBackgroundRecording": false,
           "enableBackgroundPlayback": false
         }
